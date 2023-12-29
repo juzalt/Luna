@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Luna : MonoBehaviour
 {
-    [SerializeField] public Camera playerCam;
+    [SerializeField] public GameObject target;
 
     // units per second
     public float speed = 99999;
@@ -13,7 +13,7 @@ public class Luna : MonoBehaviour
     void Update()
     {
         // remember, 10 - 5 is 5, so target - position is always your direction.
-        Vector3 dir = playerCam.transform.position - transform.position;
+        Vector3 dir = target.transform.position - transform.position;
 
         // magnitude is the total length of a vector.
         // getting the magnitude of the direction gives us the amount left to move
